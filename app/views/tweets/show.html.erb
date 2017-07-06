@@ -9,3 +9,20 @@
                 col-xs-10 col-xs-offset-1">
 
         <h2 style="text-align: center">TODAY'S TWITTS</h2>
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>Message: </strong><%= @tweet.message %>
+        </p>
+
+        <p>
+          <strong>User:  </strong><%= @tweet.user.username %>
+        </p>
+
+        <%= link_to 'Edit', edit_tweet_path(@tweet), class: 'btn btn-sm btn-default' %>
+        <%= link_to 'Home', tweets_path, class: 'btn btn-sm btn-default' %>
+
+    </div>
+  </div>
+</div>
