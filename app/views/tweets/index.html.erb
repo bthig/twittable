@@ -8,4 +8,38 @@
                 col-sm-6 col-sm-offset-3
                 col-xs-10 col-xs-offset-1">
 
-        <h2 style="text-align: center">HOME</h2>
+        <p id="notice"><%= notice %></p>
+
+        <h2 style="text-align: center">TWITTS</h2>
+
+        <%= link_to 'New Tweet', new_tweet_path, class: 'btn btn-warning' %>
+
+        <table class="table table-striped table-hover">
+        <!-- Table Head -->
+          <thead>
+            <tr>
+              <th>Message</th>
+              <th>User</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+        <!-- Table Body -->
+          <tbody>
+          <% @tweets.each do |tweet| %>
+            <tr>
+              <td><%= tweet.message %></td>
+              <td><%= tweet.user.username %></td>
+              <td><%= link_to 'Show', tweet %></td>
+              <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
+              <td><%= link_to 'Delete', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+          </tbody>
+
+
+        </table>
+
+
+</div>
+</div>
+</div>
