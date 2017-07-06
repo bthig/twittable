@@ -8,7 +8,7 @@
                 col-sm-6 col-sm-offset-3
                 col-xs-10 col-xs-offset-1">
 
-        <h2 style="text-align: center">NEW TWEET</h2>
+        <h2 style="text-align: center">NEW TWITT</h2>
 
 
           <%= form_for(@tweet) do |f| %>
@@ -31,19 +31,20 @@
             <!-- Actual Form -->
               <div class="field form-group">
                 <%= f.label :message %> <br>
-                <%= f.text_field :message %>
+                <%= f.text_field :message, class: "form-control" %>
               </div>
 
               <div class="field form-group">
                 <%= f.hidden_field :user_id, value: current_user.id %>
               </div>
 
-              <div class="actions">
-                <%= f.submit "Submit", class: 'btn btn-success' %>
+              <div class="actions form-group" style="text-align: center">
+                <%= f.submit "Submit", class: 'btn btn-success btn-space' %>
+                <%= link_to 'Home', tweets_path, class: 'btn btn-danger btn-space' %>
               </div>
           <% end %>
 
-          <%= link_to 'HOME', tweets_path, class: 'btn btn-danger' %>
+
 
           </div>
           </div>
