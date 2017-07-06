@@ -1,0 +1,28 @@
+<div class="container-fluid header">
+<h1 style="padding:10px">Twitt<span class="able">able</span></h1>
+</div>
+
+<div class="container-fluid new-registration main">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4
+                col-sm-6 col-sm-offset-3
+                col-xs-10 col-xs-offset-1">
+
+        <h2 style="text-align: center">TODAY'S TWITTS</h2>
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>Message: </strong><%= @tweet.message %>
+        </p>
+
+        <p>
+          <strong>User:  </strong><%= @tweet.user.username %>
+        </p>
+
+        <%= link_to 'Edit', edit_tweet_path(@tweet), class: 'btn btn-sm btn-default' %>
+        <%= link_to 'Home', tweets_path, class: 'btn btn-sm btn-default' %>
+
+    </div>
+  </div>
+</div>

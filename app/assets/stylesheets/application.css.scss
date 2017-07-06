@@ -15,3 +15,46 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'font-awesome';
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+.main {
+  height: 1000px;
+}
+
+.new-registration {
+  background-color: #c0dfd9;
+  color: #3b3a36;
+}
+
+h1 {
+  font-family: 'Space Mono', monospace;
+}
+
+h2 {
+  font-family: 'Space Mono', monospace;
+}
+
+label {
+  font-family: 'Nunito', monospace;
+}
+
+.header {
+  background-color: #e9ece5;
+}
+
+.twitt {
+    color: blue;
+}
+
+.able {
+    color: #b3c2bf;
+}
+
+.login-padding {
+  padding: 10px;
+}
+
+.btn-space {
+  margin: 10px;
+}
