@@ -4,4 +4,11 @@
   <%= tweet.message %> <br>
 <% end %>
 
-<%= link_to "Follow", relationships_path(friend_id: @user.id), method: :post, class: 'btn btn-default btn-sm' %>
+<% if current_user.id != @user.id %>
+    <% if current_user.friends.include?(@user) %>
+      <!-- Unfollow button -->
+      <%= link_to "Unfollow", relationship_path(current_user.relationships.find_by_friend_id(@user)), method: :delete, class: 'btn btn-danger btn-sm' %>
+    <% else %>
+    <%= link_to "Follow", relationships_path(friend_id: @user.id), method: :post, class: 'btn btn-default btn-sm' %>
+    <% end %>
+<% end %>
